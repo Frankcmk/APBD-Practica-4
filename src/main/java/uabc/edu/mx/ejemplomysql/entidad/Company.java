@@ -18,10 +18,17 @@ public class Company {
     @Column(name = "statudID")
     private int statusID;
 
+    @ManyToOne
+    private CompanyStatus companyStatus;
 
     public Company(String name, int statusID){
+        super();
         this.name = name;
         this.statusID = statusID;
+    }
+
+    public Company(){
+        super();
     }
 
     public int getId() {
